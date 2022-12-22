@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "name": "Microinfomatica y Telecomunicaciones",
+    "user": "admin",
+    "email": "admin@admin.net",
+    "address": "Domicilio de prueba",
+    "profile": "Carga-Datos",
+    "admin": true,
+    "pass": "$2b$12$V1ZF6d70TcluJNjmI.9IsuhihVMJoCc5D50my7PRDKQQu1xfga9lS"
+  }
+  
+]

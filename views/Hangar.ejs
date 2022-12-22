@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/head-base.ejs', {title: 'Crear visita'}) %>
+        <link rel="stylesheet" href="/css/visita-detail.css" />
+    </head>
+
+    <body>
+        <header><%- include('partials/header.ejs') %></header>
+
+        <main>
+            <h2 class="title">Crear relevamiento para "Hangar"</h2>
+
+            <form action="/visitas" method="POST" enctype="multipart/form-data">
+                <label for="rpl">Rack Principal (limpieza)</label><br />
+                <select name="opcionesrplh" id="rpl">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select><br /><br />
+                <label for="rpl">Observaciones</label>
+                <input type="text" name="obsrplh" id="rpl" />
+
+                <label for="rpo">Rack Principal (Orden)</label><br />
+                <select name="opcionesrpoh" id="rpo">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select><br /><br />
+                <label for="rpo">Observaciones</label>
+                <input type="text" name="obrpoh" id="rpo" />
+
+                <label for="fap">Funcionamiento AP</label><br />
+                <select name="opcionesfaph" id="fap">
+                    <option value="si">Si</option>
+                    <option value="no">No</option></select
+                ><br /><br />
+                <label for="fap">Observaciones</label>
+                <input type="text" name="obsfaph" id="fap" />
+
+                <label for="ft">Funcionamiento teléfono</label><br />
+                <select name="opcionesfth" id="ft">
+                    <option value="si">Si</option>
+                    <option value="no">No</option></select
+                ><br /><br />
+                <label for="ft">Observaciones</label>
+                <input type="text" name="obsfth" id="ft" />
+
+                <label for="image">Fotos del area</label>
+                <input accept="image/*"  type="file" name="image" multiple />
+                <button type="submit" class="submit">
+                    Agregar relevamiento
+                </button>
+            </form>
+        </main>
+    </body>
+</html>

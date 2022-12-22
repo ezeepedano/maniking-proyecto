@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/head-base.ejs', {title: 'Crear visita'}) %>
+        <link rel="stylesheet" href="/css/visita-detail.css" />
+    </head>
+
+    <body>
+        <header><%- include('partials/header.ejs') %></header>
+
+        <main>
+            <h2 class="title">Crear relevamiento para "Hangar-Oficina"</h2>
+
+            <form action="/visitas" method="POST" enctype="multipart/form-data">
+                <label for="ft">Funcionamiento teléfono</label><br />
+                <select name="opcionesftho" id="ft">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select><br /><br />
+                <label for="ft">Observaciones</label>
+                <input type="text" name="obsftho" id="ft" />
+
+                <label for="lpc">Limpiar PC</label><br />
+                <select name="opcioneslpcho" id="lpc">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select><br /><br />
+                <label for="lpc">Observaciones</label>
+                <input type="text" name="obslpcho" id="lpc" />
+
+                <label for="ac">Acomodar cables</label><br />
+                <select name="opcionesacho" id="ac">
+                    <option value="si">Si</option>
+                    <option value="no">No</option></select
+                ><br /><br />
+                <label for="ac">Observaciones</label>
+                <input type="text" name="obsacho" id="ac" />
+
+                <label for="image">Fotos del area</label>
+                <input accept="image/*"  type="file" name="image" multiple />
+                <button type="submit" class="submit">
+                    Agregar relevamiento
+                </button>
+            </form>
+        </main>
+    </body>
+</html>

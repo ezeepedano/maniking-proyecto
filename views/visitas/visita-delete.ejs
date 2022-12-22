@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/head-base.ejs', {title: 'Borrando ' +
+        visita.name}) %>
+        <link rel="stylesheet" href="/css/visita-detail.css" />
+    </head>
+
+    <body>
+        <header><%- include('partials/header.ejs') %></header>
+
+        <main>
+            <h2 class="title" style="text-align: left; font-size: 22px">
+                ¿Estás seguro de que querés borrar <%= visita.name %>?
+            </h2>
+            <form
+                action="/visitas/ <%= visita.id %>?_method=DELETE"
+                method="POST"
+            >
+                <button class="submit" type="submit">Eliminar visitao</button>
+            </form>
+        </main>
+
+    </body>
+</html>

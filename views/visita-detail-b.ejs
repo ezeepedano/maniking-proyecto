@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/head-base.ejs', {title: visita.name}) %>
+        <link rel="stylesheet" href="/css/visita-detail.css" />
+    </head>
+
+    <body>
+        <header><%- include('partials/header.ejs') %></header>
+
+        <main>
+            <article >
+                <div class="img-description">
+                    <p class="lugar-visita">Balanza</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rack Principal (limpieza)</th>
+                                <th>Rack Principal (Orden)</th>
+                                <th>Funcionamiento AP</th>
+                                <th>Limpiar PC</th>
+                                <th>UPS</th>
+                                <th>Funcionamiento teléfono</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-title="Rack Principal (limpieza)"><%= visita.opcionesrplb%></td>
+                                <td data-title="Rack Principal (Orden)"><%= visita.opcionesrpob%></td>
+                                <td data-title="Funcionamiento AP"><%= visita.opcionesfapb%></td>
+                                <td data-title="Limpiar PC"><%= visita.opcioneslpcb%></td>
+                                <td data-title="UPS"><%= visita.opcionesupsb%></td>
+                                <td data-title="Funcionamiento telefono"><%= visita.opcionesftb%></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Rack Principal (limpieza)"><%= visita.obsrplb%></td>
+                                <td data-title="Rack Principal (Orden)"><%= visita.obsrpob%></td>
+                                <td data-title="Funcionamiento AP"><%= visita.obsfapb%></td>
+                                <td data-title="Limpiar PC"><%= visita.obslpcb%></td>
+                                <td data-title="UPS"><%= visita.obsupsb%></td>
+                                <td data-title="Funcionamiento telefono"><%= visita.obsftb%></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <img
+                        src="/images/visitas/<%= visita.imagecp%>"
+                        alt="Imagen de <%= visita.id%>"
+                    />
+                </div>
+            </article>          
+
+            <h2 class="title" style="text-align: left; font-size: 22px">
+                <%= visita.name%>
+            </h2>
+
+            
+        </main>
+    </body>
+</html>

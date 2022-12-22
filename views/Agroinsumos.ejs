@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/head-base.ejs', {title: 'Crear visita'}) %>
+        <link rel="stylesheet" href="/css/visita-detail.css" />
+    </head>
+
+    <body>
+        <header><%- include('partials/header.ejs') %></header>
+
+        <main>
+            <h2 class="title">Crear relevamiento para "Agroinsumos"</h2>
+
+            <form action="/visitas" method="POST" enctype="multipart/form-data">
+
+                
+
+                <label for="fap">Funcionamiento AP</label><br />
+                <select name="opcionesfapa" id="fap">
+                    <option value="si">Si</option>
+                    <option value="no">No</option></select
+                ><br /><br />
+                <label for="fap">Observaciones</label>
+                <input type="text" name="obsfapa" id="fap" />
+                
+                <label for="image">Fotos del area</label>
+                <input accept="image/*"  type="file" name="image" multiple />
+                <button type="submit" class="submit">
+                    Agregar relevamiento
+                </button>
+            </form>
+        </main>
+    </body>
+</html>

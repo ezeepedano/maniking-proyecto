@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/head-base.ejs', {title: visita.name}) %>
+        <link rel="stylesheet" href="/css/visita-detail.css" />
+    </head>
+
+    <body>
+        <header><%- include('partials/header.ejs') %></header>
+
+        <main>
+            <article >
+                <div class="img-description">
+                    <p class="lugar-visita">Taller</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rack Principal (limpieza)</th>
+                                <th>Rack Principal (Orden)</th>
+                                <th>Funcionamiento teléfono</th>
+                                <th>Funcionamiento AP</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-title="Rack Principal (limpieza)"><%= visita.opcionesrplt%></td>
+                                <td data-title="Rack Principal (Orden)"><%= visita.opcionesrpot%></td>
+                                <td data-title="Funcionamiento teléfono"><%= visita.opcionesftt%></td>
+                                <td data-title="Funcionamiento AP"><%= visita.opcionesfapt%></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Rack Principal (limpieza)"><%= visita.obsrplt%></td>
+                                <td data-title="Rack Principal (Orden)"><%= visita.obsrpot%></td>
+                                <td data-title="Funcionamiento telefono"><%= visita.obsftt%></td>
+                                <td data-title="Funcionamiento AP"><%= visita.obsfapt%></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <img
+                        src="/images/visitas/<%= visita.imagecp%>"
+                        alt="Imagen de <%= visita.id%>"
+                    />
+                </div>
+            </article>          
+
+            <h2 class="title" style="text-align: left; font-size: 22px">
+                <%= visita.name%>
+            </h2>
+
+            
+        </main>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/head-base.ejs', {title: visita.name}) %>
+        <link rel="stylesheet" href="/css/visita-detail.css" />
+    </head>
+
+    <body>
+        <header><%- include('partials/header.ejs') %></header>
+
+        <main>
+            <article >
+                <div class="img-description">
+                    <p class="lugar-visita">Casa Principal</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rack Principal (limpieza)</th>
+                                <th>Rack Principal (Orden)</th>
+                                <th>Funcionamiento AP</th>
+                                <th>Funcionamiento telefono</th>
+                                <th>UPS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-title="Rack Principal (limpieza)"><%= visita.opcionesrplcp%></td>
+                                <td data-title="Rack Principal (Orden)"><%= visita.opcionesrpocp%></td>
+                                <td data-title="Funcionamiento AP"><%= visita.opcionesfapcp%></td>
+                                <td data-title="Funcionamiento telefono"><%= visita.opcionesftcp%></td>
+                                <td data-title="UPS"><%= visita.opcionesupscp%></td>
+                            </tr>
+                            <tr>
+                                <td data-title="Rack Principal (limpieza)"><%= visita.obsrplcp%></td>
+                                <td data-title="Rack Principal (Orden)"><%= visita.obsrpocp%></td>
+                                <td data-title="Funcionamiento AP"><%= visita.obsfapcp%></td>
+                                <td data-title="Funcionamiento telefono"><%= visita.obsftcp%></td>
+                                <td data-title="UPS"><%= visita.obsupscp%></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <img
+                        src="/images/visitas/<%= visita.imagecp%>"
+                        alt="Imagen de <%= visita.id%>"
+                    />
+                </div>
+            </article>          
+
+            <h2 class="title" style="text-align: left; font-size: 22px">
+                <%= visita.name%>
+            </h2>
+
+            
+        </main>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('partials/head-base.ejs', {title: 'Crear visita'}) %>
+        <link rel="stylesheet" href="/css/visita-detail.css" />
+    </head>
+
+    <body>
+        <header><%- include('partials/header.ejs') %></header>
+
+        <main>
+            <h2 class="title">Crear relevamiento para "Balanza"</h2>
+
+            <form action="/visitas" method="POST" enctype="multipart/form-data">
+                <label for="rpl">Rack Principal (limpieza)</label><br />
+                <select name="opcionesrplb" id="rpl">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select>
+                <br /><br />
+                <label for="rpl">Observaciones</label>
+                <input type="text" name="obsrplb" id="rpl" />
+
+                <label for="rpo">Rack Principal (Orden)</label><br />
+                <select name="opcionesrpob" id="rpo">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select>
+                <br /><br />
+                <label for="rpo">Observaciones</label>
+                <input type="text" name="obsrpob" id="rpo" />
+
+                <label for="fap">Funcionamiento AP</label><br />
+                <select name="opcionesfapb" id="fap">
+                    <option value="si">Si</option>
+                    <option value="no">No</option></select
+                ><br /><br />
+                <label for="fap">Observaciones</label>
+                <input type="text" name="obsfapb" id="fap" />
+
+                <label for="lpc">Limpiar PC</label><br />
+                <select name="opcioneslpcb" id="lpc">
+                    <option value="si">Si</option>
+                    <option value="no">No</option></select
+                ><br /><br />
+                <label for="lpc">Observaciones</label>
+                <input type="text" name="obslpcb" id="lpc" />
+
+                <label for="ups">UPS</label><br />
+                <select name="opcionesupsb" id="ups">
+                    <option value="si">Si</option>
+                    <option value="no">No</option></select
+                ><br /><br />
+                <label for="ups">Observaciones</label>
+                <input type="text" name="obsupsb" id="ups" />
+
+                <label for="ft">Funcionamiento teléfono</label><br />
+                <select name="opcionesftb" id="ft">
+                    <option value="si">Si</option>
+                    <option value="no">No</option></select
+                ><br /><br />
+                <label for="ft">Observaciones</label>
+                <input type="text" name="obsftb" id="ft" />
+
+                <label for="image">Fotos del area</label>
+                <input accept="image/*"  type="file" name="image" multiple />
+                <button type="submit" class="submit">
+                    Agregar relevamiento
+                </button>
+            </form>
+        </main>
+    </body>
+</html>
